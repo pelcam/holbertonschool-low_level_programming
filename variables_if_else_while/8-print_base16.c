@@ -7,12 +7,12 @@
 
 int main(void)
 {
-	int hexa;
+	int num;
+	int let;
 
-	while (hexa < 'f' )
-	{
-		putchar(hexa);
-		hexa++;
-	}
+	for (num = 0, num < 10, num++)
+		putchart(num);
+	for (let = 'a', let < 'f', let++)
+		putchart(let);
 	return (0);
 }
