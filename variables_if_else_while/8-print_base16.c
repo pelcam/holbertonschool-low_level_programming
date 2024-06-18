@@ -13,6 +13,6 @@ int main(void)
 	{
 		printf("%x", hexa);
 	}
-	printf('\n')
+	printf('\n');
 	return (0);
 }
