@@ -11,8 +11,8 @@ int main(void)
 	int let;
 
 	for (num = 0; num < 10; num++)
-		putchart(num);
+		putchar(num);
 	for (let = 'a'; let <= 'f'; let++)
-		putchart(let);
+		putchar(let);
 	return (0);
 }
