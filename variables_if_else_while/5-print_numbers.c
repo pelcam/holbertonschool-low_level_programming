@@ -14,6 +14,6 @@ int main(void)
 		putchar(chi);
 		chi++;
 	}
-	putchar(\n);
+	putchar('\n');
 	return (0);
 }
