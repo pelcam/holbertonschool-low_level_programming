@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	int chi
-	char chi = '0'
+	int chi;
+	char chi = '0';
 
 	while (chi < 10)
 		putchart(chi);
