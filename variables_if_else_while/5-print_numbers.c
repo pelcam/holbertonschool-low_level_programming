@@ -7,12 +7,11 @@
 
 int main(void)
 {
-	char chi = '0';
+	int num;
 
-	while (chi < 10)
+	for (num = 48; num < 58; num++)
 	{
-		putchar(chi);
-		chi++;
+		putchar(num);
 	}
 	putchar('\n');
 	return (0);
