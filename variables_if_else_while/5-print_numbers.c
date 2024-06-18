@@ -10,7 +10,7 @@ int main(void)
 	char chi = '0';
 
 	while (chi < 10)
-		putchart(chi);
+		putchar(chi);
 		chi++;
 	return (0);
 }
