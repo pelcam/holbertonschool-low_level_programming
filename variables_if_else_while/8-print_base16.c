@@ -9,10 +9,10 @@ int main(void)
 {
 	int hexa;
 
-	for (hexa = 0; hexa <= 15; hexa++)
+	while (hexa < 'f' )
 	{
-		printf("%x", hexa);
+		putchar(hexa);
+		hexa++;
 	}
-	printf("\n");
 	return (0);
 }
