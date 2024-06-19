@@ -6,7 +6,7 @@
  * Return: 0
  */
 
-void print_alphabet(void);
+void print_alphabet(void)
 {
 	char letter = 'a';
 
@@ -18,7 +18,7 @@ void print_alphabet(void);
 	_putchar('\n');
 }
 
-void print_alphabet_x10(void);
+void print_alphabet_x10(void)
 {
 	while (print_alphabet < '10')
 		print_alphabet;
