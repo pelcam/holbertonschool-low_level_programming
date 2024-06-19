@@ -2,7 +2,8 @@
 
 /**
  * main - check the code
- * print_alphabet_x10 - Print : the alphabet ten time
+ * print_alphabet - Print : the alphabet
+ * print_alphabet_x10 - Print : the alphabet function ten time
  * Return: 0
  */
 
