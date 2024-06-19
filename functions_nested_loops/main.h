@@ -1,6 +1,6 @@
-#ifndef main.h
-#define main.h
+#ifndef main_h
+#define main_h
 
-char _putchart(char a)
+char _putchar(char a)
 
 #endif
