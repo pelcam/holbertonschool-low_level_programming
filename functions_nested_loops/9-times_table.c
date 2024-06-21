@@ -15,22 +15,23 @@ void times_table(void)
 			prd = f1 * f2;
 			d = prd / 10;
 			u = prd % 10;
-			if (prd <= 9)
+			if (prd == 0)
 			{
-				if (f2 != 0)
-				{
-					_putchar(',');
-					_putchar(' ');
-					_putchar(' ');
-				}
+				_putchar(prd + '0');
+			}
+			else if (prd <= 9)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
 				_putchar(prd + '0');
 			}
 			else
 			{
-				_putchar(d + '0');
-				_putchar(u + '0');
 				_putchar(',');
 				_putchar(' ');
+				_putchar(d + '0');
+				_putchar(u + '0');
 			}
 		}
 		_putchar('\n');
