@@ -15,7 +15,8 @@ void times_table(void)
 			prd = f1 * f2;
 			d = prd / 10;
 			u = prd % 10;
-			if (prd == 0)
+
+			if (prd == 0 && f1 > 0)
 			{
 				_putchar(prd + '0');
 			}
