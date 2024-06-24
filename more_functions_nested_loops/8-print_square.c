@@ -9,12 +9,15 @@ void print_square(int size)
 {
 	int h, w;
 
-	for (h = 0; h <= size; h++)
-	{
-		for (w = 0; w <= size; w++)
-		{
-			_putchar(35);
-		}
+	if (size == 0)
 		_putchar('\n');
-	}
+	else
+		for (h = 0; h <= size; h++)
+		{
+			for (w = 0; w <= size; w++)
+			{
+				_putchar(35);
+			}
+			_putchar('\n');
+		}
 }
