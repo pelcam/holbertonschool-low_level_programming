@@ -10,7 +10,7 @@ int main(void)
 {
 	int n, m3, m5;
 
-	for (n = 0; n <= 100; n++)
+	for (n = 1; n <= 100; n++)
 	{
 		m3 = n % 3;
 		m5 = n % 5;
