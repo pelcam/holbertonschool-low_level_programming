@@ -2,6 +2,8 @@
 #include <stdio.h>
 
 /**
+ * main - very specific output
+ * Return: 0
  */
 
 int main(void)
@@ -12,22 +14,15 @@ int main(void)
 	{
 		m3 = n % 3;
 		m5 = n % 5;
-		if (m3 == 0)
-		{
-			printf("Fizz");
-		}
-		else if (m5 == 0)
-		{
-			printf("Buzz");
-		}
-		else if (m3 == 0 && m5 == 0)
-		{
+
+		if (m3 == 0 && m5 == 0)
 			printf("FizzBuzz");
-		}
+		else if (m3 == 0)
+			printf("Fizz");
+		else if (m5 == 0)
+			printf("Buzz");
 		else
-		{
 			printf("%d", n);
-		}
 		putchar(' ');
 	}
 	return (0);
