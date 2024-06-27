@@ -7,6 +7,8 @@
 
 void puts2(char *str)
 {
+	int c;
+
 	for (c = 0; c != '\0'; c += 2)
 	{
 		_putchar(str[c]);
