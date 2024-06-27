@@ -9,6 +9,15 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	*dest = *src;
+	int *ptr_dest = dest;
+
+	while (*src != '\0')
+	{
+		*ptr_dest = *src;
+		ptr_dest++;
+		src++;
+	}
+	*ptr_dest = '\0';
+
 	return (dest);
 }
