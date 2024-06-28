@@ -21,7 +21,7 @@ int _atoi(char *s)
 		{
 			r = (r *  10) + (*s - '0');
 		}
-		else
+		else if (r > 0)
 		{
 			break;
 		}
