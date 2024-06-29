@@ -10,19 +10,31 @@ char *cap_string(char *sptr)
 {
 	int c;
 
-	for (c = 0; sptr[c] '\0'; c++)
+	for (c = 0; sptr[c] != '\0'; c++)
 	{
-		if (sptr[c] == ' ' || sptr[c] == '\t' || sptr[c] == '\n' || sptr[c] == ',' || sptr[c] == ';' sptr[c] == '.' || sptr[c] == '!' || sptr[c] == '?' || sptr[c] == '"' || sptr[c] == '(' || sptr[c] == ')' || sptr[c] == '{' || sptr[c] == '}')
+		if (sptr[c] == ' '
+		|| sptr[c] == '\t'
+		|| sptr[c] == '\n'
+		|| sptr[c] == ','
+		|| sptr[c] == ';'
+		|| sptr[c] == '.'
+		|| sptr[c] == '!'
+		|| sptr[c] == '?'
+		|| sptr[c] == '"'
+		|| sptr[c] == '('
+		|| sptr[c] == ')'
+		|| sptr[c] == '{'
+		|| sptr[c] == '}')
 		{
-			a++;
-			if (str[a] >= 'A' && str[a] <= 'Z')
-				a++;
-			else if (str[a] >= 'a' && str[a] <= 'z')
-				str[a] = str[a] - 32;
-			a--;
+			c++;
+			if (sptr[c] >= 'A' && sptr[c] <= 'Z')
+				c++;
+			else if (sptr[c] >= 'a' && sptr[c] <= 'z')
+				sptr[c] = sptr[c] - 32;
+			c--;
 		}
-		else if (str[0] >= 'a' && str[0] <= 'z')
-		str[0] = str[0] - 32;
+		else if (sptr[0] >= 'a' && sptr[0] <= 'z')
+		sptr[0] = sptr[0] - 32;
 	}
-	return (str);
+	return (sptr);
 }
