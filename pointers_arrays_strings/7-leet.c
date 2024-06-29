@@ -26,11 +26,11 @@ char *leet(char *c)
 	map['T'] = '7';
 	map['l'] = '1';
 	map['L'] = '1';
-	
+
 	for (i = 0; c[i] != '\0'; i++)
 	{
 		c[i] = map[(int)c[i]];
 	}
-	
-	return c;
+
+	return (c);
 }
