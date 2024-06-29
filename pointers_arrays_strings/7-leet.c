@@ -2,36 +2,35 @@
 
 /**
  * leet - encodes a string into 1337
- * @c:
- * Return: str
+ * @c: the input string
+ * Return: the encoded string
  */
 
 char *leet(char *c)
 {
+	char map[128];
 	int i;
 
+	for (i = 0; i < 128; i++)
+	{
+		map[i] = i;
+	}
+
+	map['a'] = '4';
+	map['A'] = '4';
+	map['e'] = '3';
+	map['E'] = '3';
+	map['o'] = '0';
+	map['O'] = '0';
+	map['t'] = '7';
+	map['T'] = '7';
+	map['l'] = '1';
+	map['L'] = '1';
+	
 	for (i = 0; c[i] != '\0'; i++)
 	{
-		if (c[i] == 'a' || c[i] == 'A')
-		{
-			c[i] = '4';
-		}
-		else if (c[i] == 'e' || c[i] == 'E')
-		{
-			c[i] = '3';
-		}
-		else if (c[i] == 'o' || c[i] == 'O')
-		{
-			c[i] = '0';
-		}
-		else if (c[i] == 't' || c[i] == 'T')
-		{
-			c[i] = '7'; 
-		}
-		else if (c[i] == 'l' || c[i] == 'L')
-		{
-			c[i] = '1';
-		}
+		c[i] = map[(int)c[i]];
 	}
-	return (c);
+	
+	return c;
 }
