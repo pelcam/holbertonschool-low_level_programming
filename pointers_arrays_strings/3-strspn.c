@@ -2,9 +2,9 @@
 
 /**
  * _strspn - gets the length of a prefix substring
- * @s: 
- * @accept:
- * Return:
+ * @s: substring ig
+ * @accept: characters accepted
+ * Return: c
  */
 
 unsigned int _strspn(char *s, char *accept)
