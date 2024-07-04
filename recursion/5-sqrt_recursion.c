@@ -6,6 +6,11 @@
 
 int _sqrt_helper(int n, int i)
 {
+	if (i * i > n)
+		return (-1);
+	if (i *i == n)
+		return (1);
+	return ();
 }
 
 
