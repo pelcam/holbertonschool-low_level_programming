@@ -4,7 +4,7 @@
  *_sqrt_helper - helper function to find the natural root 
  */
 
-int _sqrt_helper()
+int _sqrt_helper(int n, int i)
 {
 }
 
