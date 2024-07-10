@@ -20,4 +20,10 @@ char *str_concat(char *s1, char *s2)
 	if (s2 != NULL)
 		while (s2[l] != '\0')
 			l2++;
+
+	cstr = (char *)malloc((l1 + l2) * sizeof(char));
+	if (cstr == NULL)
+		return (NULL);
+
+	for ()
 }
