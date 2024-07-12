@@ -1,43 +1,60 @@
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
 
 /**
- * new_dog - Creates a new dog
- * @name: The name of the dog
- * @age: The age of the dog
- * @owner: The name of the dog's owner
+ * _strdup - returns a pointer to a new string,
+ * which is a duplicate of the string str
+ * @str: the string to duplicate
  *
- * Return: Pointer to the new dog, or NULL on failure
+ * Return: pointer to the duplicated string,
+ * or NULL if insufficient memory was available
+ */
+char *_strdup(char *str)
+{
+	char *dup;
+	int i, len = 0;
+
+	if (str == NULL)
+		return (NULL);
+	while (str[len])
+		len++;
+	dup = malloc(sizeof(char) * (len + 1));
+	if (dup == NULL)
+		return (NULL);
+	for (i = 0; i < len; i++)
+		dup[i] = str[i];
+	dup[len] = '\0';
+	return (dup);
+}
+
+/**
+ * new_dog - creates a new dog
+ * @name: the name of the dog
+ * @age: the age of the dog
+ * @owner: the owner of the dog
+ *
+ * Return: pointer to the new dog_t structure, or NULL if function fails
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
-	char *name_copy;
-	char *owner_copy;
+	dog_t *dog;
 
-	d = malloc(sizeof(dog_t));
-	if (d == NULL)
+	dog = malloc(sizeof(dog_t));
+	if (dog == NULL)
 		return (NULL);
-	name_copy = malloc(strlen(name) + 1);
-	if (name_copy == NULL)
+	dog->name = _strdup(name);
+	if (dog->name == NULL)
 	{
-		free(d);
+		free(dog);
 		return (NULL);
 	}
-	memcpy(name_copy, name, strlen(name) + 1);
-	owner_copy = malloc(strlen(owner) + 1);
-	if (owner_copy == NULL)
+	dog->owner = _strdup(owner);
+	if (dog->owner == NULL)
 	{
-		free(name_copy);
-		free(d);
+		free(dog->name);
+		free(dog);
 		return (NULL);
 	}
-	memcpy(owner_copy, owner, strlen(owner) + 1);
-
-	d->name = name_copy;
-	d->age = age;
-	d->owner = owner_copy;
-
-	return (d);
+	dog->age = age;
+	return (dog);
 }
