@@ -1,6 +1,7 @@
 #ifndef GUARD
 #define GUARD
 
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
