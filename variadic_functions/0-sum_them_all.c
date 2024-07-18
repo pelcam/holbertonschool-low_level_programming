@@ -2,7 +2,7 @@
 
 /**
  * sum_them_all - returns the sum of all its parameters
- * @n: number of given arguments 
+ * @n: number of given arguments
  *
  * Return: the sum of all its parameters, and 0 if n is null
  */
@@ -10,16 +10,19 @@
 int sum_them_all(const unsigned int n, ...)
 {
 	va_list list;
-	int i;
+	unsigned int i;
 	int sum = 0;
 
-	for(i = 0, i < n, i++)
-	{
-		va_arg(n, list);
-		sum += 
-	}
 	if (n == 0)
+	{
 		return (0);
+	}
+
+	va_start(list, n);
+	for (i = 0; i < n; i++)
+	{
+		sum += va_arg(list, int);
+	}
 	va_end(list);
 	return (sum);
 }
