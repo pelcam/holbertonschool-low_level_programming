@@ -62,7 +62,7 @@ void copy_content(int fd_from, int fd_to, char *file_from, char *file_to)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 			close(fd_from);
 			close(fd_to);
-			exit(99);
+			exit(98);
 		}
 	}
 
@@ -71,7 +71,7 @@ void copy_content(int fd_from, int fd_to, char *file_from, char *file_to)
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		close(fd_from);
 		close(fd_to);
-		exit(98);
+		exit(99);
 	}
 }
 
