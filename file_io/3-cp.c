@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 	if (fd_from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-		exit(98);
+		exit(99);
 	}
 
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
@@ -31,7 +31,7 @@ int main(int argc, char *argv[])
 	{
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 		close(fd_from);
-		exit(99);
+		exit(98);
 	}
 
 	copy_content(fd_from, fd_to, argv[1], argv[2]);
